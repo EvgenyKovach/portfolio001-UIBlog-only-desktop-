@@ -1,2 +1,123 @@
-import "mixins"
-  
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap')
+@import "mixins"
+
+// Предустановки
+
+$color-line: #e7e7e7
+
+body
+  font-family: 'Roboto'
+  padding: 0
+  margin: 0
+  color: #777
+  font-size: .95rem
+
+.box
+  margin: 0 auto
+  padding: 0 15px
+  max-width: 1240px
+  width: 100%
+
+h1, h2, h3
+  font-family: 'Roboto'
+  font-size: 24px
+
+a
+  font-weight: bold
+
+// Шапка сайта
+
+header
+  border-bottom: 1px solid $color-line
+
+  .logo
+    height: 100%
+    display: flex
+    align-items: center
+    font-family: 'Montserrat', sans-serif
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 1.75rem
+    color: #292929
+    padding: 0 30px
+    border-right: 1px solid $color-line
+
+.header-cont
+  display: flex
+  align-items: center
+  height: 60px
+
+  &__list
+    position: relative
+    font-size: 0.9rem
+    margin-left: 30px
+    text-decoration: none
+    color: #292929
+    transition: .35s ease-in-out
+    &:hover
+      color: #6d6d6d
+      &::before
+        width: 97%
+    &::before
+      position: absolute
+      bottom: 0
+      content: ""
+      height: 2px
+      width: 0
+      background: #292929
+      transition: .35s ease-in-out
+
+  &__send
+    display: flex
+    background-color: #f1f1f1
+    color: #FF0040
+    font-size: .875rem
+    font-weight: 600
+    padding: 4px 16px
+    border-radius: 3px
+    border: 1px solid #FF004066
+    box-sizing: border-box
+    transition: background .22s ease-in 0s
+    background-color: white
+    margin-left: auto
+    text-decoration: none
+    &:hover
+      background: #FF0040
+      box-sizing: border-box
+      color: #f1f1f1
+
+  &__login
+    display: flex
+    height: 100%
+    align-items: center
+    margin-left: 20px
+    padding-right: 30px
+    font-size: 0.875rem
+    font-weight: 700
+    text-transform: none
+    text-decoration: none
+    color: #1f1f1f
+    border-right: 1px solid $color-line
+    span
+      position: relative
+      &:hover
+        color: #6d6d6d
+        &::before
+          width: 97%
+      &::before
+        position: absolute
+        bottom: 0
+        content: ""
+        height: 2px
+        width: 0
+        background: #292929
+        transition: .35s ease-in-out
+
+  &__search
+    font-size: 1.1rem
+    margin-left: 30px
+    margin-right: 60px
+    color: #1f1f1f
+    transition: .15s ease-in-out
+    &:hover
+      color: #6d6d6d
