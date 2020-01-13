@@ -14,7 +14,6 @@ body
 
 .box
   margin: 0 auto
-  padding: 0 15px
   max-width: 1240px
   width: 100%
 
@@ -121,3 +120,64 @@ header
     transition: .15s ease-in-out
     &:hover
       color: #6d6d6d
+
+//  Блок с новостями
+
+.wrapper-cont
+  display: flex
+  justify-content: space-between
+  padding: 30px
+
+  &__title
+    text-transform: uppercase
+    font-family: "Montserrat"
+    font-size: 14px
+    color: #929292bc
+
+  &__left
+    flex-basis: 60%
+
+    .news-list
+      display: flex
+      flex-direction: column
+
+      .list-item:first-child
+        padding-top: 30px
+
+      .list-item
+        display: flex
+        padding: 30px 0
+        border-bottom: 1px solid $color-line
+
+        &__prew
+          flex-basis: 66%
+
+        &__title
+          display: block
+          font-size: 1.3rem
+          font-weight: 700
+          color: #212121
+          text-decoration: none
+          margin-bottom: 1rem
+
+        &__descr
+          margin-bottom: 1rem
+
+        &__info
+          display: flex
+        
+        &__date
+          margin-left: 25px
+
+        &__img
+          flex-basis: 33%
+          display: flex
+          img
+            width: 90%
+            margin: 0 0 auto auto
+
+  &__right
+    flex-basis: 30%
+
+  
+
