@@ -4,6 +4,7 @@
 // Предустановки
 
 $color-line: #e7e7e7
+$colorRed: #FF0040
 
 body
   font-family: 'Roboto'
@@ -133,6 +134,7 @@ header
     font-family: "Montserrat"
     font-size: 14px
     color: #929292bc
+    margin-bottom: 30px
 
   &__left
     flex-basis: 60%
@@ -142,7 +144,7 @@ header
       flex-direction: column
 
       .list-item:first-child
-        padding-top: 30px
+        padding-top: 0
 
       .list-item
         display: flex
@@ -166,7 +168,7 @@ header
         &__info
           position: relative
           display: flex
-          color: #BFBFCD
+          color: #a9a9ac
         
         &__date
           margin-left: 25px
@@ -182,7 +184,7 @@ header
             height: 1px
             font-size: 16px
             font-weight: bold
-            color: #BFBFCD
+            color: #a9a9ac
 
         &__img
           position: relative
@@ -195,13 +197,24 @@ header
         &__section
           position: absolute
           right: 0px
-          padding: 5px
+          padding: 5px 8px
           font-size: 13px
           background: #111
+          font-weight: 200
           color: #fff
+          text-decoration: none
+          transition: .25s ease-in-out  
+          &:hover
+            background: $colorRed
 
   &__right
     flex-basis: 30%
+
+    .category
+      width: 100%
+      padding: 10px 10px
+      border: 1px solid #e7e7e7
+      border-radius: 3px
 
   
 
