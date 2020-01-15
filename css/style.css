@@ -399,4 +399,12 @@ header .logo {
   -webkit-transition: .35s ease-in-out;
   transition: .35s ease-in-out;
 }
+
+.favor-box__count {
+  font-size: 14px;
+}
+
+.favor-box__count i {
+  font-size: 12px;
+}
 /*# sourceMappingURL=style.css.map */
