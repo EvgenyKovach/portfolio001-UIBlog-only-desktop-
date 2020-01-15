@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto&display=swap");
 body {
   font-family: 'Roboto';
   padding: 0;
@@ -177,6 +177,7 @@ header .logo {
 .wrapper-cont__title {
   text-transform: uppercase;
   font-family: "Montserrat";
+  font-weight: 700;
   font-size: 14px;
   color: #929292bc;
   margin-bottom: 30px;
