@@ -115,6 +115,7 @@ header
 
   &__search
     font-size: 1.1rem
+    font-weight: 200
     margin-left: 30px
     margin-right: 60px
     color: #1f1f1f
@@ -150,17 +151,32 @@ header
         display: flex
         padding: 30px 0
         border-bottom: 1px solid $color-line
+        transition: .2s ease-in-out
+        &:hover
+          opacity: .8
 
         &__prew
           flex-basis: 66%
 
         &__title
+          position: relative
           display: block
           font-size: 1.3rem
           font-weight: 700
           color: #212121
           text-decoration: none
           margin-bottom: 1rem
+          &:hover
+            &::before
+              width: 15%
+          &::before
+            position: absolute
+            bottom: -3px
+            content: ""
+            height: 2px
+            width: 0
+            background: #292929
+            transition: .35s ease-in-out
 
         &__descr
           margin-bottom: 1rem
@@ -172,6 +188,13 @@ header
         
         &__date
           margin-left: 25px
+        
+        &__like
+          margin-left: auto
+          transition: .25s ease-in-out
+          &:hover
+            color: $colorRed
+            cursor: pointer
 
         &__author
           position: relative
@@ -207,14 +230,64 @@ header
           &:hover
             background: $colorRed
 
-  &__right
-    flex-basis: 30%
+  &__right  // правый блок
+    flex-basis: 33%
+
+    .category-box
+      position: relative
+      padding-bottom: 2rem
+      border-bottom: 1px solid #e7e7e7
+
+    .fa-sort-down
+      position: absolute
+      right: 22px
+      transform: translateY(75%)
+      color: #a9a9ac
 
     .category
       width: 100%
-      padding: 10px 10px
+      padding: 13px 10px
       border: 1px solid #e7e7e7
       border-radius: 3px
+      appearance: none
 
+  .wrapper-cont__title
+    margin-top: 2rem
+    margin-bottom: 1.5rem
+
+// блок с лучшими записями 
+
+.favor-box
+  display: flex
+  flex-direction: column
+
+  &__item
+    width: 100%
+    display: flex
+    margin: 10px 0
+
+  &__info
+
+  &__img
+    margin-left: auto
   
-
+  &__title
+    display: block
+    position: relative
+    font-size: 1rem
+    font-weight: 700
+    color: #212121
+    text-decoration: none
+    margin-bottom: .4rem
+    &:hover
+      &::before
+        width: 15%
+    &::before
+      position: absolute
+      bottom: -3px
+      content: ""
+      height: 2px
+      width: 0
+      background: #292929
+      transition: .35s ease-in-out
+      
